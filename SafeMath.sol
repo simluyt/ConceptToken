@@ -1,5 +1,7 @@
 pragma solidity ^0.4.18;
 
+/* Extended SafeMath Library */
+
 library SafeMath {
     function add(uint a, uint b) internal pure returns (uint c) {
          c = a + b;
@@ -17,4 +19,9 @@ library SafeMath {
           require(b > 0);
          c = a / b;
     }
+    function mod(uint a, uint b) internal pure returns (uint c) {
+        require(a > 0 && b > 0);
+        c = a % b;
+    }
+
 }
